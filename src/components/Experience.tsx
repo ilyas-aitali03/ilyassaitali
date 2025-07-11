@@ -1,3 +1,4 @@
+
 import { Calendar, MapPin, Users, TrendingUp, CheckCircle } from "lucide-react";
 
 const Experience = () => {
@@ -9,11 +10,12 @@ const Experience = () => {
       period: "March 2025 – Present",
       type: "Current Position",
       description: "Handling diverse responsibilities in a fast-paced retail environment with focus on customer satisfaction and operational excellence.",
+      image: "/lovable-uploads/3bd04cbd-991a-45f6-99ac-086a51ed1546.png",
       responsibilities: [
-        "Managing client interactions with professionalism and efficiency",
-        "Handling stock management and inventory control systems",
-        "Operating Point of Sale (POS) systems with accuracy",
-        "Coordinating with team members to ensure smooth operations",
+        "Managing and organizing store inventory",
+        "Assisting customers and providing service", 
+        "Operating POS (cash register)",
+        "Working with team members efficiently",
         "Providing technical support for in-store systems",
         "Maintaining accurate records and reporting"
       ],
@@ -75,12 +77,26 @@ const Experience = () => {
               </div>
 
               <div className="grid lg:grid-cols-3 gap-8">
-                {/* Left: Company Info */}
+                {/* Left: Company Info & Image */}
                 <div className="lg:col-span-1 space-y-4">
                   <div>
                     <h3 className="text-2xl font-bold text-foreground mb-2">{exp.title}</h3>
                     <h4 className="text-xl font-semibold gradient-text mb-4">{exp.company}</h4>
                   </div>
+
+                  {/* Work Photo */}
+                  {exp.image && (
+                    <div className="mb-6">
+                      <img 
+                        src={exp.image} 
+                        alt="Working at BIM Store"
+                        className="w-full h-48 object-cover rounded-lg shadow-lg"
+                      />
+                      <p className="text-sm text-foreground-muted mt-2 text-center">
+                        At work in BIM store
+                      </p>
+                    </div>
+                  )}
 
                   <div className="space-y-3">
                     <div className="flex items-center gap-3 text-foreground-secondary">
