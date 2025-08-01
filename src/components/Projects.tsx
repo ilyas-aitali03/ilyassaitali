@@ -183,6 +183,10 @@ const Projects = () => {
                     variant="outline"
                     size="sm"
                     className="btn-glass flex-1 group/btn"
+                    onClick={() => {
+                      // Create modal or detailed view for project
+                      alert(`Viewing details for: ${project.title}\n\nFeatures:\n${project.features.join('\n')}`);
+                    }}
                   >
                     <ExternalLink className="w-4 h-4 mr-2" />
                     View Details
@@ -191,6 +195,9 @@ const Projects = () => {
                     variant="outline"
                     size="sm"
                     className="btn-glass"
+                    onClick={() => {
+                      window.open('https://github.com/ilyas-aitali03', '_blank');
+                    }}
                   >
                     <Github className="w-4 h-4" />
                   </Button>
@@ -209,7 +216,12 @@ const Projects = () => {
             I'm constantly working on new projects and learning opportunities. 
             Check back regularly for updates on my latest technical endeavors.
           </p>
-          <Button className="btn-primary">
+          <Button 
+            className="btn-primary"
+            onClick={() => {
+              window.open('https://github.com/ilyas-aitali03', '_blank');
+            }}
+          >
             <Github className="w-5 h-5 mr-2" />
             View All Projects on GitHub
           </Button>

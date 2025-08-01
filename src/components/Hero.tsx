@@ -62,7 +62,17 @@ const Hero = () => {
               <Mail className="w-5 h-5 mr-2" />
               Get In Touch
             </Button>
-            <Button variant="outline" className="btn-glass group">
+            <Button 
+              variant="outline" 
+              className="btn-glass group"
+              onClick={() => {
+                // Create a download link for CV
+                const link = document.createElement('a');
+                link.href = '/cv-ilyas-aitali.pdf'; // You can replace this with actual CV file
+                link.download = 'Ilyas-AitAli-CV.pdf';
+                link.click();
+              }}
+            >
               <Download className="w-5 h-5 mr-2" />
               Download CV
             </Button>

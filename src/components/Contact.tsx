@@ -27,21 +27,44 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    try {
+      // Validate form data
+      if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
+        throw new Error('Please fill in all required fields');
+      }
 
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for reaching out. I'll get back to you within 24 hours.",
-    });
+      // Create mailto link with form data
+      const subject = encodeURIComponent(formData.subject || 'Portfolio Contact');
+      const body = encodeURIComponent(
+        `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+      );
+      const mailtoLink = `mailto:ilyassaitali03@gmail.com?subject=${subject}&body=${body}`;
+      
+      // Open default email client
+      window.location.href = mailtoLink;
 
-    setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
-    });
-    setIsSubmitting(false);
+      // Show success message
+      toast({
+        title: "Email Client Opened!",
+        description: "Your default email client should open with the message pre-filled. You can also contact me directly at ilyassaitali03@gmail.com",
+      });
+
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+      });
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: error instanceof Error ? error.message : "Something went wrong. Please try again.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
