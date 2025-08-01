@@ -28,7 +28,7 @@ const Footer = () => {
     },
     {
       icon: Mail,
-      href: "mailto:ilyas.aitali03@gmail.com",
+      href: "mailto:ilyassaitali03@gmail.com",
       label: "Email"
     }
   ];
@@ -98,8 +98,8 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4 text-foreground">Get In Touch</h4>
             <div className="space-y-2 text-foreground-secondary">
-              <p>ilyas.aitali03@gmail.com</p>
-              <p>Morocco</p>
+              <p>ilyassaitali03@gmail.com</p>
+              <p>Laayoune</p>
               <p className="text-sm">
                 Open to opportunities in<br />
                 IT Support & Networking

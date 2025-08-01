@@ -48,21 +48,21 @@ const Contact = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "ilyas.aitali03@gmail.com",
-      href: "mailto:ilyas.aitali03@gmail.com",
+      value: "ilyassaitali03@gmail.com",
+      href: "mailto:ilyassaitali03@gmail.com",
       color: "primary"
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "+212 XXX XXX XXX",
-      href: "tel:+212XXXXXXXXX",
+      value: "+212 688972173",
+      href: "tel:+212688972173",
       color: "secondary"
     },
     {
       icon: MapPin,
       label: "Location",
-      value: "Morocco",
+      value: "Laayoune",
       href: "#",
       color: "accent"
     }
@@ -84,7 +84,7 @@ const Contact = () => {
     {
       icon: MessageCircle,
       label: "WhatsApp",
-      href: "https://wa.me/212XXXXXXXXX",
+      href: "https://wa.me/212688972173",
       color: "text-foreground hover:text-accent"
     }
   ];
@@ -265,10 +265,10 @@ const Contact = () => {
               <p className="text-center text-sm text-foreground-muted">
                 Prefer email? Reach out directly at{' '}
                 <a
-                  href="mailto:ilyas.aitali03@gmail.com"
+                  href="mailto:ilyassaitali03@gmail.com"
                   className="text-primary hover:underline"
                 >
-                  ilyas.aitali03@gmail.com
+                  ilyassaitali03@gmail.com
                 </a>
               </p>
             </div>
