@@ -66,11 +66,8 @@ const Hero = () => {
               variant="outline" 
               className="btn-glass group"
               onClick={() => {
-                // Create a download link for CV
-                const link = document.createElement('a');
-                link.href = '/cv-ilyas-aitali.pdf'; // You can replace this with actual CV file
-                link.download = 'Ilyas-AitAli-CV.pdf';
-                link.click();
+                // Open CV in new tab
+                window.open('/lovable-uploads/4bd299b9-a640-4c3a-bbd8-31b940e6d341.png', '_blank');
               }}
             >
               <Download className="w-5 h-5 mr-2" />
